@@ -11,19 +11,31 @@
       margin: 0;
       padding: 0;
       background-color: #f5deb3;
-      height: 100%; /* Ensure full height for the scroll */
-      overflow-y: scroll; /* Always show scrollbar */
-      position: relative;
-      z-index: 1;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      min-height: 100vh;
     }
 
-    h1 { color: #2c3e50; }
+    .container {
+      max-width: 1000px;
+      width: 100%;
+      padding: 20px;
+      background: rgba(255, 255, 255, 0.8);
+      border-radius: 10px;
+    }
+
+    h1 { 
+      color: #2c3e50; 
+      text-align: center;
+    }
+
     h2 { color: #34495e; }
 
     img { 
       border-radius: 10px; 
       margin-top: 10px; 
-      max-width: 100%; /* Ensure the images fit within the container */
+      max-width: 100%;
       height: auto;
     }
 
@@ -39,11 +51,11 @@
       display: flex;
       gap: 10px;
       margin-top: 10px;
-      flex-wrap: wrap; /* Allows for responsive stacking of images */
+      flex-wrap: wrap;
     }
 
     .image-row img {
-      width: 48%; /* Smaller image width for mobile layout */
+      width: 48%;
       height: auto;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
       cursor: pointer;
@@ -54,28 +66,20 @@
       box-shadow: 0 4px 12px rgba(0,0,0,0.3);
     }
 
-    .video-background {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      z-index: -1;
-    }
-
     .signature {
       font-family: 'Brush Script MT', cursive;
-      position: absolute;
-      bottom: 20px;
-      right: 20px;
+      text-align: right;
       font-size: 24px;
       color: #2c3e50;
       opacity: 0.7;
+      margin-top: 40px;
     }
 
-    /* Responsive Design */
     @media (max-width: 768px) {
+      .container {
+        padding: 10px;
+      }
+
       h1 {
         font-size: 28px;
       }
@@ -85,55 +89,51 @@
       }
 
       .image-row img {
-        width: 100%; /* Full width for images on smaller screens */
+        width: 100%;
       }
     }
   </style>
 </head>
 <body>
 
-  <video class="video-background" autoplay muted loop>
-    <source src="assets/videos/7231.mp4" type="video/mp4">
-  </video>
+  <div class="container">
+    <h1>My Trip to the Camp</h1>
 
-  <h1>My Trip to the Camp</h1>
+    <div class="post">
+      <h2>Day 1</h2>
+      <p>When we arrived on Friday it was a pretty warm day. We set up our tents for that night and walked around the camp a bit.</p>
+    </div>
 
-  <div class="post">
-    <h2>Day 1</h2>
-    <p>When we arrived on Friday, it was a pretty warm day. We set up our tents for that night and walked around the camp a bit.</p>
-  </div>
+    <div class="post">
+      <h2>Day 2</h2>
+      <p>Day two we woke up and ate eggs and toast, then went to do activities. The events we did were ball throwing, Bozo buckets, duck squirting, ball collecting (or something like that), and the fruit bucket game. I really liked the games because we broke THREE records for duck squirting, Bozo buckets, and ball throwing. At the end of the night, thanks to our valiant efforts, we got third place for the first time in a while apparently. After the places got announced at the end of the day, we ate dinner and then went to sleep.</p>
 
-  <div class="post">
-    <h2>Day 2</h2>
-    <p>We woke up and ate breakfast, then participated in various activities. The games were fun, and we set new records. At the end of the day, we celebrated our achievements and enjoyed dinner.</p>
-    
-    <div class="image-row">
-      <img src="images/20250503_114746.jpg" alt="Day 2 photo 1">
-      <img src="images/20250503_210327.jpg" alt="Day 2 photo 2">
+      <div class="image-row">
+        <img src="images/20250503_114746.jpg" alt="Day 2 photo 1">
+        <img src="images/20250503_210327.jpg" alt="Day 2 photo 2">
+      </div>
+    </div>
+
+    <div class="post">
+      <h2>Day 3</h2>
+      <p>We woke up at 6:30 AM and packed up the tents. Then we left and got back at around 8:45 AM.</p>
+    </div>
+
+    <div class="signature">
+      Reiden Foster
     </div>
   </div>
 
-  <div class="post">
-    <h2>Day 3</h2>
-    <p>We packed up early in the morning and left the camp around 8:45 AM.</p>
-  </div>
-
-  <div class="signature">
-    Reiden Foster
-  </div>
-
   <script>
-    // Enable scrolling with the S key or mouse wheel
     document.addEventListener('keydown', function(e) {
       if (e.key === 's' || e.key === 'S') {
-        window.scrollBy(0, 100); // Scroll down 100px
+        window.scrollBy(0, 100);
       }
     });
 
-    // Ensure the mouse wheel scrolls properly
     window.addEventListener('wheel', function(e) {
       if (e.deltaY > 0) {
-        window.scrollBy(0, 100); // Scroll down on wheel scroll
+        window.scrollBy(0, 100);
       }
     });
   </script>
