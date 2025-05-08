@@ -17,7 +17,8 @@
 
     h1 { color: #2c3e50; }
     h2 { color: #34495e; }
-    img { max-width: 100%; border-radius: 10px; margin-top: 10px; }
+
+    img { border-radius: 10px; margin-top: 10px; }
 
     .post { 
       margin-bottom: 40px; 
@@ -25,6 +26,18 @@
       background: white; 
       border-radius: 10px; 
       box-shadow: 0 2px 5px rgba(0,0,0,0.1); 
+    }
+
+    /* New style for side-by-side images */
+    .image-row {
+      display: flex;
+      gap: 10px;
+      margin-top: 10px;
+    }
+
+    .image-row img {
+      width: 50%;
+      height: auto;
     }
   </style>
 </head>
@@ -36,26 +49,25 @@
   <div class="post">
     <h2>Day 1</h2>
     <p>When we arrived on Friday it was a pretty warm day. We set up our tents for that night and walked around the camp a bit.</p>
-    <img src="https://imgur.com/a/AW6I9Rx" alt="Day 1 photo"> <!-- Imgur link for Day 1 photo -->
   </div>
 
   <!-- Day 2 -->
   <div class="post">
     <h2>Day 2</h2>
     <p>Day two we woke up and ate eggs and toast, then went to do activities. The events we did were ball throwing, Bozo buckets, duck squirting, ball collecting (or something like that), and the fruit bucket game. I really liked the games because we broke THREE records for duck squirting, Bozo buckets, and ball throwing. At the end of the night, thanks to our valiant efforts, we got third place for the first time in a while apparently. After the places got announced at the end of the day, we ate dinner and then went to sleep.</p>
-
-    <!-- First real image -->
-    <img src="https://imgur.com/a/Xc2Jfda" alt="Grill and hotdogs"> <!-- Imgur link for Grill and hotdogs -->
+    
+    <!-- Both images under Day 2, side by side -->
+    <div class="image-row">
+      <img src="images/20250503_114746.jpg" alt="Day 2 photo 1">
+      <img src="images/20250503_210327.jpg" alt="Day 2 photo 2">
+    </div>
   </div>
 
   <!-- Day 3 -->
   <div class="post">
     <h2>Day 3</h2>
     <p>We woke up at 6:30 AM and packed up the tents. Then we left and got back at around 8:45 AM.</p>
-    <img src="https://via.placeholder.com/800x400?text=Day+3+Photo" alt="Day 3 photo">
   </div>
 
 </body>
 </html>
-
- 
