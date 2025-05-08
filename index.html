@@ -8,13 +8,13 @@
   <style>
     body { 
       font-family: Arial, sans-serif; 
-      max-width: 800px; 
-      margin: auto; 
-      padding: 20px; 
-      background-color: #f5deb3; 
+      margin: 0;
+      padding: 0;
+      background-color: #f5deb3;
+      height: 100%; /* Ensure full height for the scroll */
+      overflow-y: scroll; /* Always show scrollbar */
       position: relative;
       z-index: 1;
-      overflow: auto; /* Enable scrolling */
     }
 
     h1 { color: #2c3e50; }
@@ -28,8 +28,6 @@
       background: white; 
       border-radius: 10px; 
       box-shadow: 0 2px 5px rgba(0,0,0,0.1); 
-      position: relative;
-      z-index: 2;
     }
 
     .image-row {
@@ -111,13 +109,13 @@
       }
     });
 
-    // Ensure the mouse wheel also scrolls properly
+    // Ensure the mouse wheel scrolls properly
     window.addEventListener('wheel', function(e) {
       if (e.deltaY > 0) {
         window.scrollBy(0, 100); // Scroll down on wheel scroll
       }
     });
   </script>
-  
+
 </body>
 </html>
