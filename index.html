@@ -14,7 +14,7 @@
       background-color: #f5deb3; 
       position: relative;
       z-index: 1;
-      overflow: hidden;
+      overflow: auto; /* Enable scrolling */
     }
 
     h1 { color: #2c3e50; }
@@ -99,10 +99,25 @@
     <p>We packed up early in the morning and left the camp around 8:45 AM.</p>
   </div>
 
-  <!-- Signature at bottom right -->
   <div class="signature">
     Reiden Foster
   </div>
 
+  <script>
+    // Enable scrolling with the S key or mouse wheel
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 's' || e.key === 'S') {
+        window.scrollBy(0, 100); // Scroll down 100px
+      }
+    });
+
+    // Ensure the mouse wheel also scrolls properly
+    window.addEventListener('wheel', function(e) {
+      if (e.deltaY > 0) {
+        window.scrollBy(0, 100); // Scroll down on wheel scroll
+      }
+    });
+  </script>
+  
 </body>
 </html>
