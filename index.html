@@ -28,7 +28,7 @@
       box-shadow: 0 2px 5px rgba(0,0,0,0.1); 
     }
 
-    /* New style for side-by-side images */
+    /* Style for side-by-side images */
     .image-row {
       display: flex;
       gap: 10px;
@@ -38,6 +38,13 @@
     .image-row img {
       width: 50%;
       height: auto;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+    }
+
+    .image-row img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
     }
   </style>
 </head>
